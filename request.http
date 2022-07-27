@@ -1,12 +1,11 @@
 POST http://localhost:3000/api/v1/adminstrator/login HTTP/1.1
 Content-Type: application/json
 
-{"username": "aggarwal.ankit","password": "12345678"}
+{"username": "aggarwal.ankit", "password": "12345678"}
 
 ###
 GET http://localhost:3000/api/v1/fitness HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE5OCIsImlhdCI6MTY1ODkwODQ2OSwiZXhwIjoxNjY2Njg0NDY5fQ.q9RsKXrtifdBH5jEBexM0vGvqofZtrQIVv0MN-cp2pA
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFua2l0MTk5MiIsImlhdCI6MTY1ODkyMjM3OSwiZXhwIjoxNjY2Njk4Mzc5fQ.kPBseLveVdU-5WQOfvX3aGjFsYd7pYxmmeCCBDbv1i0
 ###
 POST http://localhost:3000/api/v1/fitness HTTP/1.1
 Content-Type: application/json
@@ -15,15 +14,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE5OCIsImlhd
 {"date": "2022-07-27","startTime": "20:00","EndTime": "21:30","duration": "90","trainerName": "Ankit","title": "Body Tonnning","desc": "Purely facinating body tonning program for intermidiate level professionals"}
 
 ###
-GET http://localhost:3000/api/v1/fitness/101 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE5OCIsImlhdCI6MTY1ODkwODQ2OSwiZXhwIjoxNjY2Njg0NDY5fQ.q9RsKXrtifdBH5jEBexM0vGvqofZtrQIVv0MN-cp2pA
+GET http://localhost:3000/api/v1/fitness/105 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFua2l0MTk5MiIsImlhdCI6MTY1ODkyMjM3OSwiZXhwIjoxNjY2Njk4Mzc5fQ.kPBseLveVdU-5WQOfvX3aGjFsYd7pYxmmeCCBDbv1i0
 
 ###
-PATCH http://localhost:3000/api/v1/fitness/102 HTTP/1.1
+PUT http://localhost:3000/api/v1/fitness/102 HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE5OCIsImlhdCI6MTY1ODkwODQ2OSwiZXhwIjoxNjY2Njg0NDY5fQ.q9RsKXrtifdBH5jEBexM0vGvqofZtrQIVv0MN-cp2pA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFua2l0MTk5MiIsImlhdCI6MTY1ODkyMjM3OSwiZXhwIjoxNjY2Njk4Mzc5fQ.kPBseLveVdU-5WQOfvX3aGjFsYd7pYxmmeCCBDbv1i0
 
-{"date": "2022-07-27","startTime": "20:00","EndTime": "21:30","duration": "90","trainerName": "Ankit","title": "Core Fucnctional","desc": "Purely facinating body tonning program for intermidiate level professionals"}
+{"date": "2022-07-27","startTime": "20:00","EndTime": "21:30","duration": "90","trainerName": "Ankit","title": "Body Traning","desc": "Purely facinating body tonning program for intermidiate level professionals"}
 
 
 ###

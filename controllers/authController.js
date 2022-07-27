@@ -28,13 +28,13 @@ const createSendToken = (user, statusCode, res) => {
   res.cookie("jwt", token, cookieOptions);
 
   // Remove password from output
-  user.password = undefined;
+  let sendData = { username: user.username, _id: user._id };
 
   res.status(statusCode).json({
     status: "success",
     token,
     data: {
-      user,
+      sendData,
     },
   });
 };
@@ -46,9 +46,13 @@ exports.login = catchAsync(async (req, res, next) => {
     return next(new AppError("Please provide username and password!", 400));
   }
   // 2) Check if user exists && password is correct
-
+  console.log(
+    req.body,
+    User,
+    username !== User.username || password !== User.password
+  );
   if (username !== User.username || password !== User.password) {
-    return next(new AppError("Incorrect email or password", 401));
+    return next(new AppError("Incorrect username or password", 401));
   }
 
   // 3) If everything ok, send token to client

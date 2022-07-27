@@ -12,7 +12,7 @@ router
 router
   .route("/:id")
   .get(authController.protect, fitnessController.getOneRecord)
-  .patch(authController.protect, fitnessController.updateData)
+  .put(authController.protect, fitnessController.updateData)
   .delete(authController.protect, fitnessController.delete);
 
 module.exports = router;

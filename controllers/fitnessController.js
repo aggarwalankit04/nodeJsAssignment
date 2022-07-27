@@ -100,8 +100,7 @@ exports.updateData = catchAsync(async (req, res, next) => {
     return next(new AppError("Please provide title and description", 400));
   }
 
-  dataArray[newData] = req.body;
-  const finalUpdatedDate = dataArray[newData];
+  const finalUpdatedDate = { ...dataArray[newData], ...req.body };
 
   res.status(200).json({
     status: "success",
